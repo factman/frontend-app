@@ -1,0 +1,38 @@
+import {
+  // drawerWidth,
+  transition,
+  container,
+} from "../../material-dashboard-react";
+
+const costomDrawerWidth = 215;
+
+const appStyle = theme => ({
+  wrapper: {
+    position: "relative",
+    top: "0",
+    height: "100vh",
+  },
+  mainPanel: {
+    [theme.breakpoints.up("md")]: {
+      width: `calc(100% - ${costomDrawerWidth}px)`,
+    },
+    overflow: "auto",
+    position: "relative",
+    float: "right",
+    ...transition,
+    maxHeight: "100%",
+    width: "100%",
+    overflowScrolling: "touch",
+  },
+  content: {
+    marginTop: "2px",
+    padding: "30px 15px",
+    minHeight: "calc(100vh - 123px)",
+  },
+  container,
+  map: {
+    marginTop: "70px",
+  },
+});
+
+export default appStyle;

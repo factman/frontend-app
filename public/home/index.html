@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bezop Marketplace || Worlds First Decentralized Marketplace</title>
+  <link href="../assets/iconfont/material-icons.css" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="../assets/css/normalize.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="../assets/css/main.css" />
+  <link rel="apple-touch-icon" sizes="76x76" href="../assets/img/bezop-logo.png">
+  <link rel="shortcut icon" href="../assets/img/logo.png">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="section group">
+    <div class="col span_3_of_3">
+      <header class="section group">
+        <div class="col span_1_of_3 push"></div>
+        <div class="col span_2_of_3 right">
+          <nav class="topnav" id="myTopnav">
+            <a href="javascript:void(0);" style="display: none" class="nav-item text_right toggle" id="toggle" onclick="Menu.toggle()">BEZOP
+              &#9776;</a>
+            <div id="usersLogin" style="display: none">
+              <div class="dropdown">
+                <button class="dropbtn">Login
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/login/customer">Customer Login</a>
+                  <a href="/login/vendor">Vendor Login</a>
+                </div>
+              </div>
+              <div class="dropdown">
+                <button class="dropbtn">Sign Up
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/login/customer">Customer Sign Up</a>
+                  <a href="/login/vendor">Vendor Sign Up</a>
+                </div>
+              </div>
+            </div>
+            <a class="nav-item" href="javascript:void(0);" onclick="Modal.toggle('video_modal', videoContent())">
+              <div class="hidden_menu_item">
+                <i class="material-icons">live_help</i>
+                <span>What is Bezop?</span>
+              </div>
+            </a>
+            <span id="compare"></span>
+            <span id="cart"></span>
+            <span id="notification"></span>
+            <div id="userAvatar" style="display: none">
+              <div class="dropdown">
+                <button class="dropbtn">
+                  <img class="avatar" src="../assets/img/avatar-default.jpg" alt="User Avatar" />
+                  <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                  <a href="/profile">
+                    <i class="material-icons">account_circle</i>
+                    My Profile
+                  </a>
+                  <a href="javascript:void(0);" onclick="UserAuth.unsetUsersAccount('customer')">
+                    <i class="material-icons">power_settings_new</i>
+                    Logout
+                  </a>
+                </div>
+              </div>
+            </div>
+          </nav>
+          <a href="javascript:void(0);" class="icon nav-but" onclick="Menu.toggle()">&#9776;</a>
+          <div class="menuOverlay" id="overlay" onclick="Menu.toggle()"></div>
+        </div>
+      </header>
+    </div>
+  </div>
+  <!-- Header Section -->
+
+  <!-- Body Section -->
+  <div class="section group">
+    <div class="col span_3_of_3 padding_xlarge">
+      <div class="section group">
+        <div class="col span_3_of_3 center">
+          <img src="../assets/img/bezop-logo.png" height="90px" style="cursor: pointer" onclick="Modal.toggle('video_modal', videoContent())" />
+        </div>
+        <div class="col span_3_of_3 center">
+          <form method="GET" action="/search" enctype="application/x-www-form-urlencoded">
+            <input class="search" required placeholder="Search for any products or store" type="search" name="q" />
+            <button type="submit" class="button primary">Search Marketplace</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Body Section -->
+
+  <!-- Footer Section -->
+  <div class="section group">
+    <div class="col span_3_of_3">
+      <footer class="section group footer">
+        <div class="col span_2_of_3">
+          <div class="foot_menu">
+            <a href="/">HOME</a>
+            <a href="/about">ABOUT US</a>
+            <a href="/policy">PRIVACY POLICY</a>
+            <a href="/terms">TERMS & CONDITIONS</a>
+          </div>
+        </div>
+        <div class="col span_1_of_3 right">
+          <div class="foot_menu">
+            <span>&copy; 2018</span>
+            <a href="/">BEZOP Marketplace</a>
+          </div>
+        </div>
+      </footer>
+    </div>
+  </div>
+  <!-- Footer Section -->
+
+  <!-- Video Modal -->
+  <div class="modal" id="video_modal">
+    <div class="modal_screen" style="display: block" onclick="Modal.toggle('video_modal')"></div>
+    <div class="modal_close" onclick="Modal.toggle('video_modal')">&times;</div>
+    <div class="modal_container"></div>
+  </div>
+  <!-- Video Modal -->
+
+  <script type="text/javascript" src="../assets/js/jwt-decode.js"></script>
+  <script type="text/javascript" src="../assets/js/main.js"></script>
+</body>
+
+</html>

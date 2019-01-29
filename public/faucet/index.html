@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bezop Faucet</title>
+  <link rel="stylesheet" type="text/css" href="css/normalize.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.3.1/css/all.css" integrity="sha384-mzrmE5qonljUremFsqc01SB46JvROS7bZs3IO2EmfFsd15uHvIt+Y8vEf7N7fWAU"
+    crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="css/main.css" />
+  <link rel="apple-touch-icon" sizes="76x76" href="images/logo.png">
+  <link rel="shortcut icon" href="images/logo.png">
+</head>
+
+<body>
+  <!-- Header Section -->
+  <div class="section group">
+    <div class="col span_3_of_3">
+      <h1 class="text_center">
+        <i class="fas fa-user-circle">&nbsp;</i>Bezop Faucet
+      </h1>
+      <hr />
+    </div>
+  </div>
+  <!-- Header Section -->
+
+  <!-- Body Section -->
+  <div class="section group">
+    <div class="col span_1_of_3 padding_small">
+      <form method="POST" action="#">
+        <input class="search" disabled onchange="server.setAccountNumber(this.value)" style="width: 100%" required placeholder="Total Accounts" type="number" name="totalAccounts" />
+        <button type="button" class="button primary" onclick="server.start()">
+          <i class="fas fa-user-circle">&nbsp;</i>
+          Get Demo Accounts
+        </button>
+      </form>
+      <br />
+      <h3>Using Faucet Accounts with MetaMask</h3>
+      <p>
+        <i class="fas fa-info-circle"></i>
+        &nbsp;Follow the steps below for guide on how to use the <strong>Faucet Accounts</strong>
+        for transactions on <strong>Bezop Marketplace</strong> via MetaMask.
+      </p>
+      <button class="accordion">Step 1: Custom Private Network</button>
+      <div class="panel">
+        <p>Create a Custom Private Network with this IP Address: <code>http://35.201.30.99:8545/</code> in MetaMask.</p>
+        <img src="images/Step1.gif" alt="Step 1" width="100%" />
+      </div>
+
+      <button class="accordion">Step 2: Get a Faucet Account</button>
+      <div class="panel">
+        <p>Click on the <strong>GET DEMO ACCOUNTS</strong> button at the top to retrieve demo accounts.</p>
+        <img src="images/Step2.gif" alt="Step 2" width="100%" />
+      </div>
+
+      <button class="accordion">Step 3: Import Account on MetaMask</button>
+      <div class="panel">
+        <p>
+          Copy the <strong>Secret Key</strong> of any account of your choice from the list.<br />
+          Import the account into your MetaMask with the secret key.
+        </p>
+        <img src="images/Step3.gif" alt="Step 3" width="100%" />
+      </div>
+    </div>
+    <div class="col span_2_of_3 padding_small">
+      <div class="section group border_left" style="padding-left: 40px">
+        <div class="col span_3_of_3" id="accountCons">
+          <h3>Server Status: <span style="color: red">Offline</span></h3>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Body Section -->
+
+  <script type="text/javascript" src="js/main.js"></script>
+</body>
+
+</html>

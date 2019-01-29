@@ -1,0 +1,72 @@
+.no-bar::-webkit-scrollbar {
+  display: none;
+}
+.no-bar::-webkit-scrollbar-button {
+  display: none;
+}
+
+.react-select-label-hidden{
+    margin-top: 0px;
+    font-size: 1rem !important;
+    transition: all 0.4s !important;
+  }
+
+  .react-select-label-visible{
+    margin-top: -30px;
+    font-size: 0.8rem !important;
+    transition: all 0.4s !important;
+  }
+  .Select .Select-control{
+    border-top: 0px;
+    border-left: 0px;
+    border-right: 0px;
+    box-shadow: none !important;
+    border-color: #d2d2d2 !important;
+    border-radius: 0px;
+  }
+  .Select.is-clearable.is-searchable{
+    margin-top: 15px
+  }
+  #root .expand{
+    position: absolute;
+    top: 12px;
+    right: 30px;
+    color: #ffffff;
+  }
+  #root .marginLeft{
+    margin-left: 25px;
+    margin-right: 0px; 
+  }
+
+  .Select.select-menu-error .Select-control{
+      border-bottom-color: red;
+  }
+  .Select.select-menu-error  .Select-placeholder{
+      color:red;
+  }
+
+  .not-selectable {
+    -webkit-touch-callout: none;
+    -webkit-user-select: none;
+    -khtml-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+
+  #root .img-size-display{
+    padding: 5px;
+    background: #cccccc;
+    color: #444444;
+    font-size: 23px;
+    text-align: center;
+    font-weight: bolder;
+  }
+
+  .slick-image {
+    height: 400px !important;
+  }
+
+  .ipOWXb {
+    position: fixed !important;
+  }
